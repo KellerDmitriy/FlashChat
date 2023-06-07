@@ -15,11 +15,7 @@ final class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "1@2.com", body: "Hey!"),
-        Message(sender: "a@b.com", body: "Hello! Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"),
-        Message(sender: "1@2.com", body: "What's up?")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +24,36 @@ final class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier )
+        
+        loadMessages()
+    }
+    
+    private func loadMessages() {
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { [unowned self] querySnapshot, error in
+                
+            self.messages = []
+                
+            if let  e = error {
+                print("There was an issue retrieving data from Firestore. \(e)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for document in snapshotDocuments {
+                        let data = document.data()
+                        if let messageSender = data[K.FStore.senderField] as? String,
+                           let massageBody = data[K.FStore.bodyField] as? String {
+                            let newMassage = Message(sender: messageSender, body: massageBody)
+                            self.messages.append(newMassage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -36,7 +62,8 @@ final class ChatViewController: UIViewController {
             db.collection(K.FStore.collectionName).addDocument(
                 data: [
                     K.FStore.senderField: messageSender,
-                    K.FStore.bodyField:messageBody
+                    K.FStore.bodyField: messageBody,
+                    K.FStore.dateField: Date().timeIntervalSince1970
                 ]) { error in
                     if let e = error {
                         print("There was issue saving data firestore, \(e)")
