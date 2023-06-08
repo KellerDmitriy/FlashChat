@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-Zc-7dW">
-                                        <rect key="frame" x="48" y="50" width="317" height="45"/>
+                                        <rect key="frame" x="48" y="50" width="100" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -111,7 +111,7 @@
                                     <constraint firstItem="ZIG-Zc-7dW" firstAttribute="leading" secondItem="q2k-4V-hI7" secondAttribute="leading" constant="48" id="Wzf-xW-0mb"/>
                                     <constraint firstAttribute="bottom" secondItem="ZIG-Zc-7dW" secondAttribute="bottom" constant="82" id="bYN-YT-omu"/>
                                     <constraint firstAttribute="bottom" secondItem="nvB-H3-ZzM" secondAttribute="bottom" constant="20" id="mP7-YB-rmd"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZIG-Zc-7dW" secondAttribute="trailing" constant="49" id="nfF-ZZ-1bk"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZIG-Zc-7dW" secondAttribute="trailing" symbolic="YES" id="nfF-ZZ-1bk"/>
                                     <constraint firstItem="ZIG-Zc-7dW" firstAttribute="top" secondItem="q2k-4V-hI7" secondAttribute="top" constant="50" id="ztG-8a-Law"/>
                                 </constraints>
                             </view>
@@ -133,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vig-Ig-ytV">
-                                        <rect key="frame" x="48" y="50" width="317" height="45"/>
+                                        <rect key="frame" x="48" y="50" width="88.5" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -146,7 +146,7 @@
                                     <constraint firstAttribute="bottom" secondItem="sra-Sq-VOn" secondAttribute="bottom" id="CFj-ax-vR0"/>
                                     <constraint firstAttribute="bottom" secondItem="JuO-cJ-ORP" secondAttribute="bottom" constant="20" id="GSN-1X-xEf"/>
                                     <constraint firstItem="JuO-cJ-ORP" firstAttribute="leading" secondItem="fDY-UU-rWy" secondAttribute="leading" id="I3A-Ou-XC6"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vig-Ig-ytV" secondAttribute="trailing" constant="49" id="Nw7-PW-BbF"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vig-Ig-ytV" secondAttribute="trailing" symbolic="YES" id="Nw7-PW-BbF"/>
                                     <constraint firstItem="sra-Sq-VOn" firstAttribute="leading" secondItem="fDY-UU-rWy" secondAttribute="leading" id="QUL-yw-Ts7"/>
                                     <constraint firstAttribute="trailing" secondItem="JuO-cJ-ORP" secondAttribute="trailing" id="aeQ-lR-rwF"/>
                                     <constraint firstAttribute="height" constant="177" id="dJS-Hx-r5E"/>
@@ -193,7 +193,7 @@
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chb-TS-PwH">
-                                        <rect key="frame" x="48" y="50" width="317" height="45"/>
+                                        <rect key="frame" x="48" y="50" width="58.5" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -206,7 +206,7 @@
                                     <constraint firstItem="Lo5-Dk-n81" firstAttribute="leading" secondItem="nsI-1r-H2L" secondAttribute="leading" id="bRZ-T5-Sop"/>
                                     <constraint firstItem="Lo5-Dk-n81" firstAttribute="top" secondItem="nsI-1r-H2L" secondAttribute="top" constant="20" id="i5C-5H-7ce"/>
                                     <constraint firstAttribute="trailing" secondItem="Lo5-Dk-n81" secondAttribute="trailing" id="k26-DI-t9I"/>
-                                    <constraint firstAttribute="trailing" secondItem="chb-TS-PwH" secondAttribute="trailing" constant="49" id="la4-Oj-A3a"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="chb-TS-PwH" secondAttribute="trailing" symbolic="YES" id="la4-Oj-A3a"/>
                                     <constraint firstAttribute="bottom" secondItem="chb-TS-PwH" secondAttribute="bottom" constant="82" id="w7C-B5-Qqm"/>
                                     <constraint firstAttribute="height" constant="177" id="ysE-xZ-JMO"/>
                                 </constraints>
@@ -229,7 +229,7 @@
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baA-rp-rS6">
-                                        <rect key="frame" x="48" y="50" width="317" height="45"/>
+                                        <rect key="frame" x="48" y="50" width="104" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -241,7 +241,7 @@
                                     <constraint firstItem="DhY-RQ-ZoI" firstAttribute="top" secondItem="baA-rp-rS6" secondAttribute="bottom" constant="31" id="C8k-3u-ojU"/>
                                     <constraint firstAttribute="height" constant="177" id="Jal-gq-xy3"/>
                                     <constraint firstAttribute="bottom" secondItem="baA-rp-rS6" secondAttribute="bottom" constant="82" id="PKx-v1-IAJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="baA-rp-rS6" secondAttribute="trailing" constant="49" id="V3p-9u-07g"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="baA-rp-rS6" secondAttribute="trailing" constant="20" symbolic="YES" id="V3p-9u-07g"/>
                                     <constraint firstItem="WHK-ZD-G7r" firstAttribute="leading" secondItem="piS-J0-MUC" secondAttribute="leading" id="ZQ4-hR-jit"/>
                                     <constraint firstItem="baA-rp-rS6" firstAttribute="leading" secondItem="piS-J0-MUC" secondAttribute="leading" constant="48" id="fRx-P7-JSM"/>
                                     <constraint firstItem="baA-rp-rS6" firstAttribute="top" secondItem="piS-J0-MUC" secondAttribute="top" constant="50" id="hHZ-a1-rSv"/>
@@ -358,6 +358,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fqw-Az-aGR">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" name="BrandLightBlue"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -370,7 +376,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="265-Er-TUa"/>
+        <segue reference="jM1-AL-Xio"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
